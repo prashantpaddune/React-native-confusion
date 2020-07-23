@@ -149,7 +149,7 @@ const MainNavigator = createDrawerNavigator({
         navigationOptions: {
             title: 'Home',
             drawerLabel: 'Home',
-            drawerIcon: ({ tintColor, focused }) => (
+            drawerIcon: ({ tintColor }) => (
                 <Icon
                     name='home'
                     type='font-awesome'
@@ -164,7 +164,7 @@ const MainNavigator = createDrawerNavigator({
         navigationOptions: {
             title: 'About Us',
             drawerLabel: 'About Us',
-            drawerIcon: ({ tintColor, focused }) => (
+            drawerIcon: ({ tintColor }) => (
                 <Icon
                     name='info-circle'
                     type='font-awesome'
@@ -179,7 +179,7 @@ const MainNavigator = createDrawerNavigator({
         navigationOptions: {
             title: 'Menu',
             drawerLabel: 'Menu',
-            drawerIcon: ({ tintColor, focused }) => (
+            drawerIcon: ({ tintColor }) => (
                 <Icon
                     name='list'
                     type='font-awesome'
@@ -194,7 +194,7 @@ const MainNavigator = createDrawerNavigator({
         navigationOptions: {
             title: 'Contact',
             drawerLabel: 'Contact',
-            drawerIcon: ({ tintColor, focused }) => (
+            drawerIcon: ({ tintColor }) => (
                 <Icon
                     name='address-card'
                     type='font-awesome'
@@ -209,7 +209,7 @@ const MainNavigator = createDrawerNavigator({
         navigationOptions: {
             title: 'Reserve Table',
             drawerLabel: 'Reserve Table',
-            drawerIcon: ({ tintColor, focused }) => (
+            drawerIcon: ({ tintColor }) => (
                 <Icon
                     name='cutlery'
                     type='font-awesome'
