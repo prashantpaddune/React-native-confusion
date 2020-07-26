@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import { ScrollView, Text, View, Animated, Easing } from 'react-native';
+import { Text, View, Animated, Easing } from 'react-native';
 import { Card } from 'react-native-elements';
 import { connect } from 'react-redux';
 import { baseUrl } from '../shared/baseUrl';
-import {Loading} from "./LoadingComponent";
+import { Loading } from "./LoadingComponent";
+import * as Animatable from 'react-native-animatable';
 
 const mapStateToProps = state => {
     return {
