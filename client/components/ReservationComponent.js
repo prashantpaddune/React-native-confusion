@@ -4,6 +4,7 @@ import DateTimePicker from '@react-native-community/datetimepicker';
 import Moment from 'moment';
 import { Icon } from "react-native-elements";
 import {TouchableOpacity} from "react-native";
+import * as Animatable from 'react-native-animatable';
 
 class Reservation extends Component {
 
@@ -44,6 +45,7 @@ class Reservation extends Component {
 
     render() {
         return(
+            <Animatable.View animation="fadeInRightBig" duration={2000}>
           <ScrollView>
               <View style={styles.formRow}>
                   <Text style={styles.formLabel}>Number of Guests</Text>
@@ -134,6 +136,7 @@ class Reservation extends Component {
                   </View>
               </Modal>
           </ScrollView>
+            </Animatable.View>
         );
     }
 }
