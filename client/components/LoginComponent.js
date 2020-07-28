@@ -266,7 +266,7 @@ class RegisterTab extends Component {
 const styles = StyleSheet.create({
     container: {
         justifyContent: 'center',
-        margin: 20,
+        marginTop: 40,
     },
     imageContainer: {
         flex: 1,
@@ -279,7 +279,7 @@ const styles = StyleSheet.create({
         height: 60
     },
     formInput: {
-        margin: 20
+        marginTop: 20
     },
     formCheckbox: {
         margin: 20,
