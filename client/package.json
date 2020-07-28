@@ -38,7 +38,8 @@
     "redux-persist": "^6.0.0",
     "redux-thunk": "^2.3.0",
     "expo-secure-store": "~9.0.1",
-    "expo-permissions": "~9.0.1"
+    "expo-permissions": "~9.0.1",
+    "expo-mail-composer": "~8.2.1"
   },
   "devDependencies": {
     "@babel/core": "~7.9.0",

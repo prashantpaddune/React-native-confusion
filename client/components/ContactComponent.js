@@ -5,6 +5,7 @@ import { Card, Button, Icon } from 'react-native-elements';
 import * as MailComposer from 'expo-mail-composer';
 
 const RenderContact = (props) => {
+
     return (
         <Animatable.View animation="fadeInDown" duration={2000} delay={1000}>
             <Card
@@ -31,9 +32,6 @@ const RenderContact = (props) => {
 
 class Contact extends Component {
 
-    static navigationOptions = {
-        title: 'Contact'
-    };
 
     sendMail() {
         MailComposer.composeAsync({
@@ -42,6 +40,10 @@ class Contact extends Component {
             body: 'To whom it may concern:'
         })
     }
+
+    static navigationOptions = {
+        title: 'Contact'
+    };
 
     render() {
         return(
