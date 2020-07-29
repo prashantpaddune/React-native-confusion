@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, useEffect} from 'react';
 import {Text, View, ScrollView, StyleSheet, Picker, Switch, Button, Modal, Alert} from "react-native";
 import DateTimePicker from '@react-native-community/datetimepicker';
 import Moment from 'moment';
@@ -7,6 +7,10 @@ import {TouchableOpacity} from "react-native";
 import * as Animatable from 'react-native-animatable';
 import { Notifications } from 'expo';
 import * as Permissions from 'expo-permissions';
+import * as ImagePicker from "expo-image-picker";
+import * as ImageManipulator from "expo-image-manipulator";
+import * as Calendar from 'expo-calendar';
+
 
 class Reservation extends Component {
 
@@ -21,6 +25,7 @@ class Reservation extends Component {
             showModal: false
         }
     }
+
 
     async obtainNotificationPermission() {
         let permission = await Permissions.getAsync(Permissions.USER_FACING_NOTIFICATIONS);
@@ -56,6 +61,32 @@ class Reservation extends Component {
         });
     }
 
+    async obtainCalendarPermission() {
+        let permission = await Permissions.getAsync(Permissions.CALENDAR);
+        if (permission.status !== 'granted') {
+            permission = await Permissions.askAsync(Permissions.CALENDAR);
+            if (permission.status !== 'granted') {
+                Alert.alert('Permission not granted to calendar');
+            }
+        }
+        return permission;
+    }
+
+    async addReservationToCalendar(date) {
+        await this.obtainCalendarPermission();
+
+        let dateMs = Date.parse(date);
+        let startDate = new Date(dateMs);
+        let endDate = new Date(dateMs + 2 * 60 * 60 * 1000);
+
+        await Calendar.createEventAsync('1', {
+            title: 'Con Fusion Table Reservation',
+            startDate: startDate,
+            endDate: endDate,
+            timeZone: 'Asia/Hong_Kong',
+            location: '121, Clear Water Bay Road, Clear Water Bay, Kowloon, Hong Kong'
+        });
+    }
     static navigationOptions = {
         title: 'Reservation Table'
     }
@@ -76,6 +107,7 @@ class Reservation extends Component {
                     text: 'OK',
                     onPress: () => {
                         this.presentLocalNotification(this.state.date);
+                        this.addReservationToCalendar(this.state.date);
                         this.resetForm()
                     }
                 }
@@ -95,6 +127,7 @@ class Reservation extends Component {
     }
 
     render() {
+
         return(
             <Animatable.View animation="zoomIn" duration={2000}>
                 <ScrollView>
