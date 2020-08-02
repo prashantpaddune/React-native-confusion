@@ -30,19 +30,27 @@ More features will be added in the future.
 <img
 		width="210"
 		alt="Capture 1"
-		src="https://github.com/stevenpersia/tinder-react-native/blob/master/preview/capture-1.png">
+		src="https://github.com/prashantpaddune/React-native-confusion/blob/master/client/screenshots/Screenshot_20200802-163049.jpg">
 <img
 		width="210"
 		alt="Capture 2"
-		src="https://github.com/stevenpersia/tinder-react-native/blob/master/preview/capture-2.png">
+		src="https://github.com/prashantpaddune/React-native-confusion/blob/master/client/screenshots/Screenshot_20200802-163110.jpg">
 <img
 		width="210"
 		alt="Capture 3"
-		src="https://github.com/stevenpersia/tinder-react-native/blob/master/preview/capture-3.png">
+		src="https://github.com/prashantpaddune/React-native-confusion/blob/master/client/screenshots/Screenshot_20200802-163120.jpg">
 <img
 		width="210"
 		alt="Capture 4"
-		src="https://github.com/stevenpersia/tinder-react-native/blob/master/preview/capture-4.png">
+		src="https://github.com/prashantpaddune/React-native-confusion/blob/master/client/screenshots/Screenshot_20200802-163127.jpg">
+<img
+		width="210"
+		alt="Capture 5"
+		src="https://github.com/prashantpaddune/React-native-confusion/blob/master/client/screenshots/Screenshot_20200802-163238.jpg">
+<img
+		width="210"
+		alt="Capture 6"
+		src="https://github.com/prashantpaddune/React-native-confusion/blob/master/client/screenshots/Screenshot_20200802-163321.jpg">
 
 
 ## Installation and usage
@@ -60,7 +68,7 @@ Install packages :
 npm install
 ```
 
-When installation is complete, App with following command:
+When installation is complete,Run App with following command:
 
 ```bash
 expo start
