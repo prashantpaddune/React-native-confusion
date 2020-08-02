@@ -1,12 +1,15 @@
 {
-  "name": "native-confusion",
-  "displayName": "native-confusion",
   "expo": {
+    "sdkVersion": "38.0.0",
     "name": "native-confusion",
-    "slug": "native-confusion",
+    "icon": "./icon.png",
     "version": "1.0.0",
-    "assetBundlePatterns": [
-      "**/*"
-    ]
+    "slug": "native-confusion",
+    "ios": {
+      "bundleIdentifier": "net.food.confusion.confusion"
+    },
+    "android": {
+      "package": "net.food.confusion.confusion"
+    }
   }
 }
